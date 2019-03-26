@@ -1,5 +1,5 @@
-[TaskHub]
-
+# TaskHub
+![v1.0](https://img.shields.io/badge/version-1.0-green.svg) ![task](https://img.shields.io/badge/type-task-yellow.svg) ![v1.0](https://img.shields.io/badge/state-done-blue.svg) ![task](https://img.shields.io/badge/type-task-yellow.svg)
 ## 分组学习 1 
 
 - [ ] 学习DOM虚拟方法 `MUST` `Done` `2019-1-1 20:28` `Task`
