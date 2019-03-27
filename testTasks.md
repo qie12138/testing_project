@@ -86,7 +86,7 @@ This is [an example](http://example.com/ "Title") inline link.
 **double asterisks**
 
 ### Emoji :happy:
-:smile:
+哈哈哈哈 :smile:
 
 ### Subscript
 
