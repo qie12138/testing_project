@@ -1,3 +1,29 @@
+#### 参考文献:   
+
+[1] https://github.com/markdown-it/markdown-it/blob/master/test/fixtures/markdown-it/xss.txt   
+
+[2] http://louiszhai.github.io/2016/03/05/xss/
+
+#### 刷新历史
+
+| 时间 | 说明 | 更新人 |
+| ---- | ---- | ------ |
+|2019-03-28 | 首次刷新 | ZHD |
+
+---
+
+## Blockquote
+> hello <a name="n"
+> href="javascript:alert('xss')">*you*</a>
+
+## Html element event
+
+<div style="padding: 20px; opacity: 0;height: 20px;" onmouseout="alert('Gotcha!')">1</div>
+
+![XSS Img]("onerror="alert('XSS'))
+
+![XSS Img](https://www.example.com/image.png"onload="alert('XSS'))
+
 ## Script 
 <script>alert('gotcha');</script>
 
@@ -17,6 +43,19 @@
 
 [xss link](file:///123)
 
+[xss link](&#34;&#62;&#60;script&#62;alert&#40;&#34;xss&#34;&#41;&#60;/script&#62;)
+
+[xss link](&#74;avascript:alert(1))
+
+[xss link](&#x26;#74;avascript:alert(1))
+
+[xss link](\&#74;avascript:alert(1))
+
+[xss link](<javascript:alert(1)>)
+
+[xss link](javascript&#x3A;alert(1))
+
+## <p> tag link
 <p>[xss link](javascript:alert(1))</p>
 
 <p>[xss link](JAVASCRIPT:alert(1))</p>
@@ -27,14 +66,6 @@
 
 <p>[xss link](file:///123)</p>
 
-[xss link](&#34;&#62;&#60;script&#62;alert&#40;&#34;xss&#34;&#41;&#60;/script&#62;)
-
-[xss link](&#74;avascript:alert(1))
-
-[xss link](&#x26;#74;avascript:alert(1))
-
-[xss link](\&#74;avascript:alert(1))
-
 <p><a href="%22%3E%3Cscript%3Ealert(%22xss%22)%3C/script%3E">xss link</a></p>
 
 <p>[xss link](Javascript:alert(1))</p>
@@ -43,11 +74,7 @@
 
 <p><a href="&amp;#74;avascript:alert(1)">xss link</a></p>
 
-[xss link](<javascript:alert(1)>)
-
 <p>[xss link](&lt;javascript:alert(1)&gt;)</p>
-
-[xss link](javascript&#x3A;alert(1))
 
 <p>[xss link](javascript:alert(1))</p>
 
@@ -111,3 +138,4 @@ test2
 </code></pre>
 <pre><code class="js">test2
 </code></pre>
+
